@@ -1,15 +1,27 @@
 <!--Include the partials/header pages in the camptents page.-->
 <%- include ('partials/header'); -%>
-
-<h1>This is the Camp Tents Page</h1>
-
-<% camptents.forEach(function(camptents){ %>
-	<div>
-		<h4><%=camptents.name %></h4>
-		<img src="<%= camptents.image %>">
-	</div>
+<!-- BOOTSTRAP CONTAINER -->
+<div class="container">
+	<!-- JUMBOTRON -->
+	<header class="jumbotron">
+		<h1>This is the Camp Tents Page</h1>
+		<p>View our hand-picked camping tents from all over the world</p>
+			<p>
+				<!-- ADD A NEW CAMPING TENT -->
+				<a class="btn btn-primary btn-lg" href="/camptents/new">Add New Camping Tent<a></a>
+			</p>
+	</header>
 	
-<% }); %>
+			<% camptents.forEach(function(camptents){ %>
+				<div>
+					<h4>
+						<%=camptents.name %>
+					</h4>
+					<img src="<%= camptents.image %>">
+				</div>
+
+				<% }); %>
+</div>
 
 <!--Include the partials/footer pages in the camptents page.-->
 <%- include ('partials/footer'); -%>

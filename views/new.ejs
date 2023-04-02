@@ -1,0 +1,14 @@
+<!--Include the partials/header pages in the new page.-->
+<%- include ('partials/header'); -%>
+
+<h1>Create a new camp tent</h1>
+
+<form action="/camptents" method="post">
+	<input type="text" name="name" placeholder="name">
+	<input type="text" name="image" placeholder="image url">
+	<button>Submit</button>
+</form>
+
+<a href="/camptents">Go Back</a>
+<!--Include the partials/header pages in the new page.-->
+<%- include ('partials/footer'); -%>
